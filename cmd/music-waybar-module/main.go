@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/subeenregmi/spotify-waybar-module/pkg/waybar"
+	"github.com/subeenregmi/music-waybar-module/pkg/waybar"
 )
 
 func main() {

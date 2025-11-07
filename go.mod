@@ -1,3 +1,3 @@
-module github.com/subeenregmi/spotify-waybar-module
+module github.com/subeenregmi/music-waybar-module
 
 go 1.24.6
