@@ -1,5 +1,5 @@
 package waybar
 
-type Module struct {
+type ModuleOutput struct {
 	Text string `json:"text"`
 }
