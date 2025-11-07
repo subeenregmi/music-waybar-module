@@ -42,7 +42,7 @@ func main() {
 			text = fmt.Sprintf("%v - %v", metadata.Artist, metadata.Title)
 		}
 
-		if len(text) <= MAX_LENGTH {
+		if len(text) >= MAX_LENGTH {
 			text = metadata.Title
 		}
 
