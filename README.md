@@ -6,12 +6,15 @@ supported: spotify
 ### showcase
 
 no spotify open
+---
 ![](docs/notopen.png)
 
 spotify open (paused)
+---
 ![](docs/paused.png)
 
 spotify open (playing)
+----
 ![](docs/playing.png)
 
 ### setup
