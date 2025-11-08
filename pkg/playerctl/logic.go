@@ -28,7 +28,7 @@ func Status() (string, error) {
 		return "", err
 	}
 
-	return string(output), nil
+	return strings.TrimSpace(string(output)), nil
 }
 
 func GetMetadata() (Metadata, error) {
