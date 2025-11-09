@@ -8,6 +8,11 @@ const (
 	COMMAND  = "playerctl"
 	STATUS   = "status"
 	METADATA = "metadata"
+
+	LIST_PLAYERS  = "-l"
+	PLAYER_OPTION = "-p"
+
+	SPOTIFY = "spotify"
 )
 
 type Metadata struct {

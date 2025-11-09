@@ -13,17 +13,18 @@ func metadataRegex(key string) *regexp.Regexp {
 }
 
 func Players() ([]string, error) {
-	output, err := exec.Command(COMMAND, "-l").Output()
+	output, err := exec.Command(COMMAND, LIST_PLAYERS).Output()
 	if err != nil {
 		return nil, err
 	}
 
-	players := string(output)
-	return strings.Split(players, " "), nil
+	players := strings.Split(string(output), "\n")
+
+	return players, nil
 }
 
-func Status() (string, error) {
-	output, err := exec.Command(COMMAND, STATUS).Output()
+func Status(player string) (string, error) {
+	output, err := exec.Command(COMMAND, PLAYER_OPTION, player, STATUS).Output()
 	if err != nil {
 		return "", err
 	}
@@ -31,8 +32,8 @@ func Status() (string, error) {
 	return strings.TrimSpace(string(output)), nil
 }
 
-func GetMetadata() (Metadata, error) {
-	output, err := exec.Command(COMMAND, METADATA).Output()
+func GetMetadata(player string) (Metadata, error) {
+	output, err := exec.Command(COMMAND, PLAYER_OPTION, player, METADATA).Output()
 	if err != nil {
 		return Metadata{}, err
 	}

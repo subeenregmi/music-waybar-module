@@ -16,12 +16,8 @@
         packages = with pkgs; [
           go 
           gnumake
-          zsh
         ];
 
-        shellHook = ''
-          zsh
-        '';
       };
     };
 }
